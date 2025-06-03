@@ -17,7 +17,7 @@ style = "bold purple"
 truncation_length = 32
 
 [git_status]
-format = '([✘ $conflicted](bold red) )([+$added](green) )([- $deleted](red) )'
+format = '([✘ $conflicted](bold red) )([+$added](green) )([- $deleted](red) )([?$untracked](yellow) )'
 style = "bold purple"
 
 # 右側時間
