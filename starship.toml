@@ -1,0 +1,45 @@
+# starship.toml
+
+format = """
+$all$fill$time
+$character"""
+
+# 將右側 prompt 顯示時間（需 fill）
+[fill]
+symbol = " "
+
+# 左側 prompt 分段
+# [username]
+# style_user = "bold yellow"
+# style_root = "bold red"
+# format = "[$user]($style)@"
+# show_always = true
+
+# [hostname]
+# ssh_only = false
+# format = "[$hostname](bold yellow) "
+
+[directory]
+style = "bold blue"
+format = "[](fg:yellow bg:blue)[  $path ](bg:blue fg:white)[](fg:blue bg:none) "
+
+[git_branch]
+format = "[ $branch](bold purple) "
+style = "bold purple"
+truncation_length = 32
+
+[git_status]
+format = '([✘ $conflicted](bold red) )([+$added](green) )([- $deleted](red) )'
+style = "bold purple"
+
+# 右側時間
+[time]
+disabled = false
+time_format = "%T"  # 顯示 HH:MM:SS
+format = "[ $time ](bg:gray fg:blue)[  ](fg:gray)"
+style = "bold cyan"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
